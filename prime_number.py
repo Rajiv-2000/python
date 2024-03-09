@@ -1,10 +1,8 @@
 def prime(number):
   """check given number is prime number or not"""
-  count = 2
-  if number==0:
-     return False
-  
-  for i in range(2, number):
+  count = 1
+
+  for i in range(2, number+1):
     if number % i == 0:
       count= count+1
     if count>2:
