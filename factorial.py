@@ -10,8 +10,8 @@ def factorial(n):
       a *= i
     return a
  
-n=int(input("Enter a number to find it's factorial: "))
-print("Factorial of number is: ", factorial(n))
+#n=int(input("Enter a number to find it's factorial: "))
+#print("Factorial of number is: ", factorial(n))
 
 '''
 n=6, 1-5
@@ -28,4 +28,26 @@ i=6, a=720*6=4320
 6*5!, 5*4!
 call stack
 
+Rescursion:
+'funtion' calling itself. When pblm and sub pblm is same recursion will use.
+
+n=6, factorial(6)= 6* factorial(6-1=5), 5*factorial(5-1=4), 4*factorial(4-1=3), 3*factorial(3-1=2), 2*factorial(2-1=1), 1*factorial(1-1=0)= >1*1=1
+factorial(n)
+if n==0:
+  return 1
+
+
 '''
+def factorialRecursion(n):
+  if n==0:
+    return 1
+  else:
+    return n* factorialRecursion(n-1)
+
+for i in range(1,11):
+  print(i)
+  factorialRecursion(i)
+  a=factorialRecursion(i)
+  print(a)
+#result=factorialRecursion(n)
+#print("factorial of is ",result)

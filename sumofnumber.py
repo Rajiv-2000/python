@@ -1,11 +1,12 @@
-def sumOfNumbers(N):
-  """Add all the integers from 1 to given number N"""
+def sumOfNumbersRecursive(N):
+    """Add all the integers from 1 to given number N recursively"""
+    if N == 0:
+        return 0
+    else:
+        result = N + sumOfNumbersRecursive(N - 1)
+        return result
+    
+N = int(input("Enter a number: "))
+print(sumOfNumbersRecursive(N))
 
-  sum=0
-  for i in range(1, N+1):
-    sum += i
-    return sum
-
-N=int(input("Enter a number: "))
-print("sum of numbers to N is: ", sumOfNumbers(N))
-
+#learn fucntion and DataTypes
