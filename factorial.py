@@ -46,7 +46,6 @@ def factorialRecursion(n):
 
 for i in range(1,11):
   print(i)
-  factorialRecursion(i)
   a=factorialRecursion(i)
   print(a)
 #result=factorialRecursion(n)
